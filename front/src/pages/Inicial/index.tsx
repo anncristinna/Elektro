@@ -1,11 +1,9 @@
 import { InicialDiv, TextTitulo} from './style'
 import LogoElektro from '../../assets/LogoElektro.png'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import Home from '../Home'
 
 const Inicial = () => {
-    useEffect(() => {
-        
-    })
     return (
         <InicialDiv>
             <img src={LogoElektro} alt="Logo Elektro" />

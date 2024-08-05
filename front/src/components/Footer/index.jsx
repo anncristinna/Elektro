@@ -5,13 +5,17 @@ import Profile from '../../assets/profile.png'
 
 //componentes
 import {DivFooter, ItemFooter} from './style'
+import { useNavigate } from 'react-router-dom'
 
 
 const Footer = () => {
+
+    const navigate = useNavigate()
+
     return (
         <DivFooter>
             <ItemFooter>
-                <img src= {Home} alt="Icone de home" />
+                <img src= {Home} alt="Icone de home" onClick={() => navigate('/')}/>
                 <p>Home</p>
             </ItemFooter>
             <ItemFooter>
@@ -23,7 +27,7 @@ const Footer = () => {
                 <p>Avisos</p>
             </ItemFooter>
             <ItemFooter>
-                <img src= {Profile} alt="Icone de perfil" />
+                <img src= {Profile} alt="Icone de perfil" onClick={() => navigate('/meuperfilvisitante')}/>
                 <p>Perfil</p>
             </ItemFooter>
         </DivFooter>

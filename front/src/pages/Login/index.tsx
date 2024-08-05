@@ -11,9 +11,13 @@ import LogoElektro from '../../assets/LogoElektro.png'
 
 //styled
 import {DivLogin, Img, ASenha, DivSenha, DivBotao, DivContainerLogo, TextContainer, TextCadastro} from './style'
+import { useNavigate } from "react-router-dom"
 
 
 const Login = () => {
+
+    const navigate = useNavigate()
+
    return (
     <DivLogin>
         <Header icon1= {Voltar} content="Entrar" icon2= {Empty}/>
@@ -29,7 +33,7 @@ const Login = () => {
             <TextContainer>ou</TextContainer>
             <ContainerLogo/>
         </DivContainerLogo>
-        <TextCadastro href="#">Não possui cadastro? Cadastre-se!</TextCadastro>
+        <TextCadastro onClick={() => navigate('/cadastro2')}>Não possui cadastro? Cadastre-se!</TextCadastro>
     </DivLogin>
    )
 }

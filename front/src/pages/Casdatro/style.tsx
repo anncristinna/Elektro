@@ -8,6 +8,9 @@ export const DivCadastro = styled.div `
     align-items: center;
     width: 100vw;
     height: 100vh;
+    a {
+    text-decoration: underline;
+    }
 `
 
 export const CadastroImagem = styled.div `

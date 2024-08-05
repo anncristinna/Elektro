@@ -14,7 +14,15 @@ const Routes = () => {
     return (
         <HashRouter basename="/">
             <Router>
-                <Route element= { ErroMenu } path="/erromenu" />
+                <Route Component= { Home } path="/" />
+                <Route Component= { Cadastro } path="/cadastro" />
+                <Route Component= { Cadastro2 } path="/cadastro2" />
+                <Route Component= { ErroPesquisa} path="/erropesquisa" />
+                <Route Component= { Inicial } path="/inicial" />
+                <Route Component= { Login } path="/login" />
+                <Route Component= { MeuPerfilVisitante} path="/meuperfilvisitante" />
+                <Route Component= { Parabens } path="/parabens" />
+                <Route Component= { ErroMenu } path="/erromenu" />
             </Router>
         </HashRouter>
     )

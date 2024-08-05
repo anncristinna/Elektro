@@ -26,12 +26,27 @@ import Produto from "../../components/Produto"
 import FooterHome from '../../components/FooterHome'
 import Footer from '../../components/Footer'
 import HamburgerMenu from "../../components/MenuHamburger"
+import { useNavigate } from "react-router-dom"
+import { useEffect, useState } from "react"
+import Inicial from "../Inicial"
 
 
 
 const Home = () => {
+
+    const [Splash, setSplash] = useState(true)
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setSplash(false)
+        }, 3000)
+        return () => clearTimeout(timer)
+    })
+
+    const navigate = useNavigate()
+
     return (
         <HomeDiv>
+            {Splash && (<Inicial/>)}
             <HeaderHome>
                 <HamburgerMenu/>
                 <InputHeader type="text" placeholder=" Encontrar na Elektro" />
@@ -83,11 +98,6 @@ const Home = () => {
                 </RowProduto>
             </SectionProduto>
             <FooterHome/>
-           
-
-           
-            
-
         </HomeDiv>
     )
 }

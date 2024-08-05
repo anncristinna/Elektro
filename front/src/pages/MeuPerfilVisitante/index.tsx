@@ -17,16 +17,24 @@ import Meus from "../../components/Meus"
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
 import Botao from "../../components/Botao"
+import { useNavigate } from 'react-router-dom'
 
 const MeuPerfilVisitante = () => {
+
+    const navigate = useNavigate()
+
     return (
         <Div>
             <Header icon1={LogoElektro} content="" icon2= {Config}/>
             <MainDiv>
                 <img src= {SemPerfil} alt="Sem foto de perfil" />
                 <DivBotoes>
-                    <Botao content='Entrar' color= '#2B2B2B'/>
-                    <Botao content='Cadastrar' color='#2B2B2B'/>
+                    <div onClick={() => navigate('/login')}>
+                        <Botao content='Entrar' color= '#2B2B2B'/>
+                    </div>
+                    <div onClick={() => navigate('/cadastro')}>
+                        <Botao content='Cadastrar' color='#2B2B2B'/>
+                    </div>
                 </DivBotoes>
                 <MeusDiv>
                     <Meus logo={Dados} content="Meus dados"/>

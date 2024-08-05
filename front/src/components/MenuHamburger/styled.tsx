@@ -48,3 +48,9 @@ export const LiSair = styled.li `
     position: absolute;
     bottom: 10%;
 `
+export const LiUser = styled.li `
+  display: flex;
+  align-items: center;
+  
+  color: #f5f5f5;
+`

@@ -10,9 +10,13 @@ import {DivContainerLogo, DivBotao, Div, TextContainer} from './style'
 //imagens
 import Seta from '../../assets/voltar.png'
 import Empty from '../../assets/empty.png'
+import { useNavigate } from "react-router-dom"
 
 
 const Cadastro2 = () => {
+
+    const navigate = useNavigate()
+
     return (
         <Div>
             <Header icon1= {Seta} content="Cadastrar-se" icon2= {Empty}/>
@@ -28,7 +32,7 @@ const Cadastro2 = () => {
                 <CadastroInput label="Senha" placeholder="Digite sua senha"/>
                 <CadastroInput label="Confirme senha" placeholder="Confirme sua senha"/>
             </form>
-            <DivBotao>
+            <DivBotao onClick={() => navigate('/parabens')}>
                 <Botao content="Cadastrar-se" color="#2B2B2B"/>
             </DivBotao>
         </Div>
